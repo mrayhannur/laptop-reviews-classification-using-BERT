@@ -18,9 +18,14 @@ The dataset is from [here](https://www.kaggle.com/datasets/charitarth/semeval-20
 
 ## Result
 1. Exploration and Preprocessing: I did a little exploration of the existing dataset by finding insights such as the number of rows of data, distribution of data based on polarity and aspect terms, and created a wordcloud of the most reviewed aspect terms. Preprocessing was carried out by deleting duplicate rows, dropping rows with 'conflict' polarity because their contents were too diverse, mapping aspect terms (from 700 to 16 aspects only) to make classification simpler, and did the standard text normalization. The imbalanced data is also handled using oversampling techniques.
+
 2. Fine-Tuning BERT to Sentiment/Polarity Classification: After spliting the data, I fine-tuned the BERT model for the first case, polarity classification. By using the Confusion Matrix as an evaluation, the model performance shows good performance with an **accuracy level of 89%** for 3 class (positive, neutral, negative) classification.
+![alt text](https://github.com/mrayhannur/laptop-reviews-classification-using-fine-tuned-BERT/blob/main/sentiment%20classification%20evaluation%20result.png)
+
 3. Fine-Tuning BERT to Aspect Classification: After spliting the data, I fine-tuned the BERT model for the second case, aspect classification. By also using the Confusion Matrix as an evaluation, the model performance shows good performance with an **accuracy level of up to 90%** for classifying **16 classes**.
-4. Prediction New Data using the Fine-Tuned Model: By using the same 10 rows of new data, both fine-tuned models also be able to classify sentiment classes and aspects contained in reviews.
+![alt text](https://github.com/mrayhannur/laptop-reviews-classification-using-fine-tuned-BERT/blob/main/aspect%20classification%20evaluation%20result.png)
+
+5. Prediction New Data using the Fine-Tuned Model: By using the same 10 rows of new data, both fine-tuned models also be able to classify sentiment classes and aspects contained in reviews.
 
 ## Things Can Be Improved
 1. Exploration with Indonesian datasets and transformer models (for my relevance)
